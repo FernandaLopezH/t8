@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Contacto</title>
+</head>
+<body title="Estás en el formulario">
+	<h1>Contacto</h1>
+	<form action="http://andreihelo-sinatra.herokuapp.com/contact">
+		<fieldset>
+		  <legend>Información Personal:</legend>
+		  Nombre: <br>
+		  <input type="text" name="person[name]"></input><br>
+		  <br>
+		  Sexo: <br>
+		  <input type="radio" name="person[genre]" value="femenino"> Femenino </input><br>
+		  <input type="radio" name="person[genre]" value="masculino"> Masculino</input><br>
+		  <br>
+		  Fecha de nacimiento:
+		  <br><input type="date" name="person[birthdate]"><br>
+		  <br>
+		  Ciudad de origen: <br>
+		  	<select name="person[city]">
+		  	<option value="Seleccione" select="select">Seleccione su ciudad</option>
+    		<option value="Chihuahua">Chihuahua</option>
+    		<option value="Ojinaga">Ojinaga</option>
+    		<option value="Juarez">Juárez</option>
+    		<option value="Parral">Parral</option><br>
+    		</select>
+    		<br>
+    	</fieldset>
+    	<fieldset>
+    	  <legend>Preferencias:</legend>
+    	  Selecciona la opción que mas concuerde contigo:<br>
+    	  <input type="checkbox" name="person[preferences][]" value="codigo">Me gusta tirar código mas de 1 hora al día.</input>
+		  <br>
+		  <input type="checkbox" name="person[preferences][]" value="videojuegos">Tengo como mínimo una consola y un videojuego de la misma.</input>
+		  <br>
+		  <input type="checkbox" name="person[preferences][]" value="gadgets">Leo sobre los últimos gadgets del momento.</input>
+		  <br>
+		  <br>
+		  Escríbenos tu comentario:<br>
+		  <textarea name="message" rows="10" cols="30">Tu comentario...</textarea>
+		  </fieldset>
+		  <input type="submit" value="submit"></input>
+		</fieldset>
+	</form>
+</body>
+</html>
